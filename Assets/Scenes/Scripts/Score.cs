@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
 
-    int AIscore=0;
-    int Playerscore=0;
+    int AIScore=0;
+    int PlayerScore=0;
+    public TMPro.TextMeshProUGUI AIText;
+    public TMPro.TextMeshProUGUI PlayerText;
+
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -18,16 +22,16 @@ public class Score : MonoBehaviour
     void Update()
     {
         if(transform.position.x<-9.5){
-            Debug.Log("Goal for AI");
             this.transform.position=new Vector3(0f,0f,0f);
             rb.velocity=new Vector3(0f,0f,0f);
-            AIscore++;
+            AIScore++;
+            AIText.text=AIScore.ToString();
         }
         else if(transform.position.x>9.5){
-            Debug.Log("Goal for Player");
             this.transform.position=new Vector3(0f,0f,0f);
             rb.velocity=new Vector3(0f,0f,0f);
-            Playerscore++;
+            PlayerScore++;
+            PlayerText.text=PlayerScore.ToString();
         }
     }
 }

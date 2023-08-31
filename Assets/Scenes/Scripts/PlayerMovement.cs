@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform player;
     public float horspeed=20f;
     public float verspeed=10f;
+    float hori,ver;
     Rigidbody2D rb;
     void Start()
     {
@@ -16,11 +17,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float hori=Input.GetAxis("Horizontal")*horspeed;
-        float ver=Input.GetAxis("Vertical")*verspeed;
-
+        hori=Input.GetAxis("Horizontal")*horspeed;
+        ver=Input.GetAxis("Vertical")*verspeed;
+        if(transform.position.x>-.5f) hori=-Mathf.Abs(hori);
         rb.velocity=new Vector3(hori,ver,0);
-
-        
     }
 }
