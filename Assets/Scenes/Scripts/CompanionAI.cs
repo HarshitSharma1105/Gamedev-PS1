@@ -34,16 +34,13 @@ public class CompanionAI : MonoBehaviour
 
     }
     bool movingTowards(){
-        Debug.Log("We reached movingtowards");
         float x=Vector2.Dot(rbBall.velocity,Vector2.right);
         return x<0f;
     }
     bool isnotwithIt(){
-        Debug.Log("We reached isnotwithit");
         return !((Ball.position-Defender.position).sqrMagnitude<.5f);
     }
     void pass(){
-        Debug.Log("We reached pass");
         Vector3 dir=(new Vector3(3.8f,1.8f,0f)-Attacker.position).normalized;
         rbBall.velocity=dir*hitspeed;
     }

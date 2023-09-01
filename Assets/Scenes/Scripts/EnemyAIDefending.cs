@@ -43,12 +43,10 @@ public class EnemyAI : MonoBehaviour
         return !((Ball.position-enemy.position).sqrMagnitude<.5f);
     }
     void pass(){
-        Debug.Log("We passed");
         Vector3 dir=(Defender.position-Attacker.position).normalized;
         rbBall.velocity=dir*hitspeed;
     }
     void shoot(){
-        Debug.Log("We shooted");
         Vector3 shootdir=(new Vector3(-9.5f,0f,0f)-Attacker.position).normalized;
         rbBall.velocity=shootdir*shootspeed;
     }
