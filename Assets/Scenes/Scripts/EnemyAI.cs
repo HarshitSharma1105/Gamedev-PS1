@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
     bool movingTowards(){
         //Debug.Log("We reached movingtowards");
         float x=Vector2.Dot(rbBall.velocity,Vector2.left);
-        return x<0f;
+        return x<=0f;
     }
     bool isnotwithIt(Transform enemy){
         //Debug.Log("We reached isnotwithit");
@@ -55,7 +55,7 @@ public class EnemyAI : MonoBehaviour
         rbBall.velocity=dir*hitspeed;
     }
     void shoot(){
-        Vector3 shootdir=(new Vector3(-9.8f,0f,0f)-Attacker.position).normalized;
+        Vector3 shootdir=(new Vector3(-9.45f,0f,0f)-Attacker.position).normalized;
         rbBall.velocity=shootdir*shootspeed;
     }
     

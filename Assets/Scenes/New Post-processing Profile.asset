@@ -89,7 +89,7 @@ MonoBehaviour:
     value: 0
   mixerGreenOutGreenIn:
     overrideState: 0
-    value: 100
+    value: 200
   mixerGreenOutBlueIn:
     overrideState: 0
     value: 0
@@ -100,17 +100,25 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   mixerBlueOutBlueIn:
-    overrideState: 0
-    value: 100
+    overrideState: 1
+    value: 200
   lift:
     overrideState: 1
+<<<<<<< Updated upstream
     value: {x: 1, y: 0.9999398, z: 0.9870608, w: 0}
+=======
+    value: {x: 1, y: 0.7255714, z: 0.9342466, w: 0}
+>>>>>>> Stashed changes
   gamma:
     overrideState: 1
     value: {x: 0.94533414, y: 0.9631432, z: 1, w: 0}
   gain:
     overrideState: 1
+<<<<<<< Updated upstream
     value: {x: 0.95586216, y: 1, z: 0.98238385, w: 0}
+=======
+    value: {x: 0.9072534, y: 0.94171387, z: 1, w: 0}
+>>>>>>> Stashed changes
   masterCurve:
     overrideState: 0
     value:
