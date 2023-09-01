@@ -15,13 +15,13 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
        if(Defender.position.x<=1f){
-        Defender.position=new Vector3((Defender.position.x)+4f*Time.deltaTime,Defender.position.y,0f);
+        Defender.position=new Vector3((Defender.position.x)+5f*Time.deltaTime,Defender.position.y,0f);
         }
         else if(Defender.position.x>=6f){
-        Defender.position=new Vector3((Defender.position.x)-4f*Time.deltaTime,Defender.position.y,0f);
+        Defender.position=new Vector3((Defender.position.x)-5f*Time.deltaTime,Defender.position.y,0f);
         }
         if(Attacker.position.x<=7f){
-        Attacker.position=new Vector3((Attacker.position.x)+4f*Time.deltaTime,Attacker.position.y,0f);
+        Attacker.position=new Vector3((Attacker.position.x)+5f*Time.deltaTime,Attacker.position.y,0f);
         }
        if(movingTowards() && isnotwithIt(Defender)){ 
         movemenetX=Mathf.MoveTowards(Defender.position.x,Ball.position.x,horispeed*Time.deltaTime);

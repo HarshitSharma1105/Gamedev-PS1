@@ -21,7 +21,7 @@ public class CompanionAI : MonoBehaviour
     void Update()
     {
        if(Defender.position.x>-7f){
-        Defender.position=new Vector3((Defender.position.x)-4f*Time.deltaTime,Defender.position.y,0f);
+        Defender.position=new Vector3((Defender.position.x)-5f*Time.deltaTime,Defender.position.y,0f);
         }
        if(movingTowards() && isnotwithIt()){ 
         movemenetX=Mathf.MoveTowards(Defender.position.x,Ball.position.x,.1f*horispeed*Time.deltaTime);
