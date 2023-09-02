@@ -7,6 +7,7 @@ TagManager:
   - Ball
   - EnemyAI
   - Companion AI
+  - Sides
   layers:
   - Default
   - TransparentFX

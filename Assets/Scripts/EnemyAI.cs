@@ -15,10 +15,10 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
        if(Defender.position.x<=1f){
-        Defender.position=new Vector3((Defender.position.x)+5f*Time.deltaTime,Defender.position.y,0f);
+        Defender.position=new Vector3(Defender.position.x+5f*Time.deltaTime,Defender.position.y,0f);
         }
         else if(Defender.position.x>=6f){
-        Defender.position=new Vector3((Defender.position.x)-5f*Time.deltaTime,Defender.position.y,0f);
+        Defender.position=new Vector3(Defender.position.x-5f*Time.deltaTime,Defender.position.y,0f);
         }
         if(Attacker.position.x<=7f){
         Attacker.position=new Vector3((Attacker.position.x)+5f*Time.deltaTime,Attacker.position.y,0f);
@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
     bool movingTowards(){
         //Debug.Log("We reached movingtowards");
         float x=Vector2.Dot(rbBall.velocity,Vector2.left);
-        return x<=0f;
+        return x<0f;
     }
     bool isnotwithIt(Transform enemy){
         //Debug.Log("We reached isnotwithit");
@@ -55,8 +55,9 @@ public class EnemyAI : MonoBehaviour
         rbBall.velocity=dir*hitspeed;
     }
     void shoot(){
-        Vector3 shootdir=(new Vector3(-9.45f,0f,0f)-Attacker.position).normalized;
+        Vector3 shootdir=(new Vector3(-9.8f,0f,0f)-Attacker.position).normalized;
         rbBall.velocity=shootdir*shootspeed;
+        
     }
     
     

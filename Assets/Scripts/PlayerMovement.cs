@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     float hori,ver;
     Rigidbody2D rb;
     public Rigidbody2D rbBall;
+
     void Start()
     {
      rb=GetComponent<Rigidbody2D>();   
@@ -35,4 +36,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 dir=(new Vector3(9.8f,0f,0f)-player.position).normalized;
         rbBall.velocity=dir*20f;
     }
+
+    
 }

@@ -20,13 +20,8 @@ public class CompanionAI : MonoBehaviour
 
     void Update()
     {
-<<<<<<< Updated upstream
        if(Defender.position.x>-7f){
-        Defender.position=new Vector3((Defender.position.x)-5f*Time.deltaTime,Defender.position.y,0f);
-=======
-       if(Defender.position.x>-3f){
-        Defender.position=new Vector3((Defender.position.x)-.3f,Defender.position.y,0f);
->>>>>>> Stashed changes
+        Defender.position=new Vector3(Defender.position.x-.5f,Defender.position.y,0f);
         }
        if(movingTowards() && isnotwithIt()){ 
         movemenetX=Mathf.MoveTowards(Defender.position.x,Ball.position.x,.1f*horispeed*Time.deltaTime);
@@ -41,7 +36,6 @@ public class CompanionAI : MonoBehaviour
     bool movingTowards(){
         float x=Vector2.Dot(rbBall.velocity,Vector2.right);
         return x<0f;
-        // return (Ball.position.x>0f);
     }
     bool isnotwithIt(){
         return !((Ball.position-Defender.position).sqrMagnitude<.5f);

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Togglegameobject : MonoBehaviour
 {
     public GameObject targetGameObject;
+    bool val=false;
 
     private void Start()
     {
@@ -14,6 +15,7 @@ public class Togglegameobject : MonoBehaviour
     public void ToggleActiveState()
     {
         // Toggle the active state of the targetGameObject
-        targetGameObject.SetActive(!targetGameObject.activeSelf);
+        targetGameObject.SetActive(!val);
+        val=true;
     }
 }
